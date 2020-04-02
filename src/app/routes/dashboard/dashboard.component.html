@@ -1,0 +1,28 @@
+<nz-card  [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+  <nz-card-meta
+    nzTitle='别让自己“墙了”自己'
+    nzDescription="告诉你一种面对人生的思考方式，在这种思考方式下，你会有更多的可能性，更大的场景……而不是直接把自己归到“平常人”，把自己“墙”了！"
+    [nzAvatar]="avatarTemplate"
+  ></nz-card-meta>
+</nz-card>
+<ng-template #avatarTemplate>
+  <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+</ng-template>
+<ng-template #coverTemplate>
+  <div style="padding:20px 40px 0;">
+    <p>井蛙不可以语于海者，拘于虚也；//空间局限</p>
+
+    <p>夏虫不可以语于冰者，笃于时也；//时间局限</p>
+
+    <p>曲士不可以语于道者，束于教也。//认识局限</p>
+  </div>
+</ng-template>
+<ng-template #actionSetting>
+  <i nz-icon nzType="like" nzTheme="outline"></i>
+</ng-template>
+<ng-template #actionEdit>
+  <i nz-icon nzType="edit"></i>
+</ng-template>
+<ng-template #actionEllipsis>
+  <i nz-icon nzType="ellipsis"></i>
+</ng-template>
