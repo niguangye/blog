@@ -1,9 +1,9 @@
-<!--<div class="alain-default__header-logo">
+<div >
   <a [routerLink]="['/']" class="alain-default__header-logo-link">
-    <img class="alain-default__header-logo-expanded" src="./assets/logo-full.svg" alt="{{settings.app.name}}" style="max-height:40px;" />
-    <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{settings.app.name}}" style="max-height:30px;" />
+   <!-- <img class="alain-default__header-logo-expanded" src="./assets/logo.png" alt="{{settings.app.name}}" style="max-height:40px;" />-->
+    <img src="./assets/logo.png" alt="{{settings.app.name}}" style="max-height:30px;" />
   </a>
-</div>-->
+</div>
 <div class="alain-default__nav-wrap nav-wrap">
   <ul class="alain-default__nav">
     <li>
@@ -48,10 +48,14 @@
       <header-task></header-task>
     </li>-->
     <!-- App Icons -->
+
     <li>
       <a class="alain-default__nav-item" href="//github.com/niguangye" target="_blank">
         <i nz-icon nzType="github"></i>
       </a>
+    </li>
+    <li class="hidden-mobile">
+      <header-qrcode></header-qrcode>
     </li>
     <li class="hidden-mobile">
       <header-icon></header-icon>

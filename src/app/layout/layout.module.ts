@@ -33,23 +33,26 @@ const HEADERCOMPONENTS = [
   HeaderIconComponent,
   HeaderFullScreenComponent,
   HeaderStorageComponent,
-  HeaderUserComponent
+  HeaderUserComponent,
+  HeaderQrcodeComponent
 ];
 
 // passport
 import { LayoutPassportComponent } from './passport/passport.component';
+import { HeaderQrcodeComponent } from './default/header/components/qrcode.component';
 const PASSPORT = [
   LayoutPassportComponent
 ];
 
 @NgModule({
-  imports: [SharedModule],
+  imports: [ SharedModule ],
   entryComponents: SETTINGDRAWER,
   declarations: [
     ...COMPONENTS,
     ...HEADERCOMPONENTS,
     ...PASSPORT
   ],
+  providers: [ ],
   exports: [
     ...COMPONENTS,
     ...PASSPORT
