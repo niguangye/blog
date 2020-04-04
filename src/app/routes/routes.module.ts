@@ -11,6 +11,7 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
+import { ArticleModule } from './article/article.module';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -25,7 +26,7 @@ const COMPONENTS = [
 const COMPONENTS_NOROUNT = [];
 
 @NgModule({
-  imports: [ SharedModule, RouteRoutingModule ],
+  imports: [SharedModule, RouteRoutingModule, ArticleModule],
   declarations: [
     ...COMPONENTS,
     ...COMPONENTS_NOROUNT
