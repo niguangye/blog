@@ -4,6 +4,7 @@ import { ArticleRoutingModule } from './article-routing.module';
 import { ArticleListComponent } from './list/list.component';
 import { ArticleViewComponent } from './view/view.component';
 import { ArticleAddComponent } from './add/add.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 const COMPONENTS = [
   ArticleListComponent];
@@ -15,6 +16,7 @@ const COMPONENTS_NOROUNT = [
   imports: [
     SharedModule,
     ArticleRoutingModule,
+    MarkdownModule.forRoot(),
   ],
   declarations: [
     ...COMPONENTS,

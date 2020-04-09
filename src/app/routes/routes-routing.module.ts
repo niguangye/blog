@@ -28,6 +28,7 @@ const routes: Routes = [
       // 业务子模块
       { path: 'guestbook', loadChildren: () => import('./guestbook/guestbook.module').then(m => m.GuestbookModule) },
       { path: 'insights', loadChildren: () => import('./insights/insights.module').then(m => m.InsightsModule) },
+      { path: 'articles', loadChildren: () => import('./article/article.module').then(m => m.ArticleModule) },
     ]
   },
   // 全屏布局
