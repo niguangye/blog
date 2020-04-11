@@ -4,10 +4,13 @@ import { SharedModule } from '@shared';
 
 // import { TinymceWidget } from './widgets/tinymce/tinymce.widget';
 // import { UEditorWidget } from './widgets/ueditor/ueditor.widget';
+import { MarkdownWidget } from '../markdown/markdown-widget.component';
+
 
 export const SCHEMA_THIRDS_COMPONENTS = [
   // TinymceWidget,
   // UEditorWidget
+  MarkdownWidget
 ];
 
 @NgModule({
@@ -25,5 +28,6 @@ export class JsonSchemaModule {
   constructor(widgetRegistry: WidgetRegistry) {
     // widgetRegistry.register(TinymceWidget.KEY, TinymceWidget);
     // widgetRegistry.register(UEditorWidget.KEY, UEditorWidget);
+    widgetRegistry.register(MarkdownWidget.KEY, MarkdownWidget);
   }
 }

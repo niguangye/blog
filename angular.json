@@ -28,10 +28,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "node_modules/ngx-simplemde/src/index.css"
             ],
             "scripts": [
-              "node_modules/ajv/dist/ajv.bundle.js"
+              "node_modules/ajv/dist/ajv.bundle.js",
+              "node_modules/simplemde-antd/dist/simplemde.min.js"
             ]
           },
           "configurations": {

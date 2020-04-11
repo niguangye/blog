@@ -8,17 +8,23 @@ import { DelonABCModule } from '@delon/abc';
 import { DelonACLModule } from '@delon/acl';
 import { DelonFormModule } from '@delon/form';
 
+import { SimplemdeModule } from 'ngx-simplemde';
+
 // #region third libs
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { CountdownModule } from 'ngx-countdown';
+import { MarkdownWidget } from '@shared/markdown/markdown-widget.component';
 const THIRDMODULES = [
   NgZorroAntdModule,
-  CountdownModule
+  CountdownModule,
+  SimplemdeModule
 ];
 // #endregion
 
 // #region your componets & directives
-const COMPONENTS = [];
+const COMPONENTS = [
+
+];
 const DIRECTIVES = [];
 // #endregion
 
@@ -38,7 +44,7 @@ const DIRECTIVES = [];
   declarations: [
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
   ],
   exports: [
     CommonModule,

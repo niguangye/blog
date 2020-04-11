@@ -29,7 +29,7 @@ const LANG_PROVIDES = [
 import { JsonSchemaModule } from '@shared/json-schema/json-schema.module';
 const FORM_MODULES = [ JsonSchemaModule ];
 // #endregion
-
+import { SimplemdeModule } from 'ngx-simplemde';
 
 // #region Http Interceptors
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -82,6 +82,9 @@ import { LayoutModule } from './layout/layout.module';
     SharedModule,
     LayoutModule,
     RoutesModule,
+    SimplemdeModule.forRoot({
+      style: 'default'
+    }),
     ...FORM_MODULES,
     ...GLOBAL_THIRD_MODULES
   ],

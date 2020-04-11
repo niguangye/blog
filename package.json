@@ -41,6 +41,7 @@
     "ng-alain": "^8.9.0",
     "ng-zorro-antd": "^8.5.2",
     "ngx-markdown": "^8.2.2",
+    "ngx-simplemde": "^1.1.1",
     "rxjs": "~6.4.0",
     "screenfull": "^5.0.0",
     "tslib": "^1.10.0",

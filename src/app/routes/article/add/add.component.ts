@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NzModalRef } from 'ng-zorro-antd/modal';
-import { NzMessageService } from 'ng-zorro-antd/message';
-import { _HttpClient } from '@delon/theme';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd';
+import { SFSchema, SFStringWidgetSchema } from '@delon/form';
 
 @Component({
   selector: 'app-article-add',
@@ -9,11 +8,34 @@ import { _HttpClient } from '@delon/theme';
 })
 export class ArticleAddComponent implements OnInit {
 
-  constructor(
-    private modal: NzModalRef,
-    public msgSrv: NzMessageService,
-    public http: _HttpClient
-  ) { }
+  editorSchema: SFSchema = {
+    properties: {
+      title: {
+        type: 'string',
+        title: '',
+        ui: {
+            maxLength: 20,
+            placeholder: '请输入标题,最多20个字',
+            change: val => console.log(val),
+            focus: e => console.log('focus', e),
+            blur: e => console.log('blur', e),
+            enter: e => console.log('enter', e),
+          } as SFStringWidgetSchema,
+        },
+      editor: {
+        type: 'string',
+        title: '',
+        ui: {
+          widget: 'md',
+        }
+      }
+    },
+    required: ['title', 'editor']
+  }
+
+
+  constructor(public msg: NzMessageService) { }
+  submit(value: any) { this.msg.success(JSON.stringify(value)); }
 
   ngOnInit(): void {
 

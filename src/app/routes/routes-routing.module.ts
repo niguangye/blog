@@ -23,7 +23,7 @@ const routes: Routes = [
     canActivate: [],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘', titleI18n: 'dashboard' } },
+      { path: 'dashboard', component: DashboardComponent, data: { title: '主页' } },
       { path: 'exception', loadChildren: () => import('./exception/exception.module').then(m => m.ExceptionModule) },
       // 业务子模块
       { path: 'guestbook', loadChildren: () => import('./guestbook/guestbook.module').then(m => m.GuestbookModule) },
