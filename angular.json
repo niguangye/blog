@@ -151,7 +151,7 @@
             "ak": "LTAI4FeXzCKbRZVYsBRe5YwT",
             "sk": "UrrQxmSPe9ZxumdSZ8YGI7noNNVazU",
             "bucket": "blog-ngy",
-            "prefix": "blog",
+            "prefix": "",
             "buildCommand": "npm run build"
           }
         }
