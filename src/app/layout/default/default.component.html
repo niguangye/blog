@@ -5,4 +5,9 @@
 <section class="default__content">
   <router-outlet></router-outlet>
 </section>
+<nz-back-top [nzTemplate]="tpl" [nzVisibilityHeight]="100">
+  <ng-template #tpl>
+    <i nz-icon nzType="rocket" class="back-top-icon"></i>
+  </ng-template>
+</nz-back-top>
 <ng-template #settingHost></ng-template>
