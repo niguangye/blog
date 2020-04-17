@@ -1,0 +1,43 @@
+
+<nz-list
+  [nzLoading]="loading"
+  [nzDataSource]="list"
+  [nzRenderItem]="item"
+  [nzGrid]="{ gutter: 24, lg: 8, md: 12, sm: 24, xs: 24 }"
+>
+  <ng-template #item let-item>
+    <nz-list-item>
+      <button
+        *ngIf="item === null"
+        nz-button
+        (click)="msg.success('add')"
+        [nzType]="'dashed'"
+        style="width: 100%; height: 183px;"
+      >
+        <i nz-icon nzType="plus"></i>
+        <span>新增产品</span>
+      </button>
+      <nz-card nzHoverable *ngIf="item !== null" [nzActions]="[op1, op2]">
+        <ng-template #op1>
+          <a href="https://zhaopin.kuaishou.cn/recruit/e/#/official/social/" target="_blank">
+            去看看
+          </a>
+        </ng-template>
+        <ng-template #op2>
+          <a (click)="msg.success('操作二：' + item.id)">操作二</a>
+        </ng-template>
+        <nz-card-meta [nzAvatar]="nzAvatar" [nzTitle]="nzTitle" [nzDescription]="nzDescription">
+          <ng-template #nzAvatar>
+            <nz-avatar nzSize="large" [nzSrc]="item.avatar"></nz-avatar>
+          </ng-template>
+          <ng-template #nzTitle>
+            <a (click)="msg.success('标题：' + item.id)">{{ item.title }}</a>
+          </ng-template>
+          <ng-template #nzDescription>
+            <ellipsis>{{ item.description }}</ellipsis>
+          </ng-template>
+        </nz-card-meta>
+      </nz-card>
+    </nz-list-item>
+  </ng-template>
+</nz-list>
