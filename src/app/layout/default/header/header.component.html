@@ -1,7 +1,8 @@
 <div >
   <a [routerLink]="['/']" class="alain-default__header-logo-link">
    <!-- <img class="alain-default__header-logo-expanded" src="./assets/logo.png" alt="{{settings.app.name}}" style="max-height:40px;" />-->
-    <img src="./assets/logo.png" alt="{{settings.app.name}}" style="max-height:30px;" />
+    <img src="assets/logo.png" alt="{{settings.app.name}}" class="hidden-pc" style="max-height:30px;" />
+    <img src="assets/logo-full.png" alt="{{settings.app.name}}" class="hidden-mobile" style="max-height:30px;" />
   </a>
 </div>
 <div class="alain-default__nav-wrap nav-wrap">
@@ -18,13 +19,13 @@
         Insights
       </a>
     </li>
-    <li>
+    <li class="hidden-mobile">
       <a class="alain-default__nav-item nav-item"
          [routerLink]="['/recruitment']">
         求职
       </a>
     </li>
-    <li>
+    <li class="hidden-mobile">
       <a class="alain-default__nav-item nav-item"
          [routerLink]="['/guestbook']">
         留言板
@@ -55,15 +56,15 @@
     </li>-->
     <!-- App Icons -->
 
-    <li>
+<!--    <li>
       <a class="alain-default__nav-item" href="//github.com/niguangye" target="_blank">
         <i nz-icon nzType="github"></i>
       </a>
-    </li>
+    </li>-->
     <li class="hidden-mobile">
       <header-qrcode></header-qrcode>
     </li>
-    <li class="hidden-mobile">
+    <li>
       <header-icon></header-icon>
     </li>
     <!-- Settings -->
@@ -90,5 +91,16 @@
         <i nz-icon nzType="menu-{{settings.layout.collapsed ? 'fold' : 'unfold'}}"></i>
       </div>
     </li>-->
+
   </ul>
+
+</div>
+<div class="hidden-mobile" style="padding-top:6px;">
+  <a href="https://github.com/niguangye" target="_blank">
+    <img width="149" height="74"
+         src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149"
+         class="attachment-full size-full"
+         alt="Fork me on GitHub"
+         data-recalc-dims="1"/>
+  </a>
 </div>

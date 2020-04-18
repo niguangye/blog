@@ -12,7 +12,7 @@ import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
     <nz-dropdown-menu #wechatMenu="nzDropdownMenu">
       <div class="wechatMenu" style="padding:20px 20px 0;background-color: #722ED1">
         <img src="assets/qrcode.jpg" width=120 height=120 alt="微信公众号">
-        <div style="padding:8px 0;width:100%;text-align:center;color:#fff;">洞察Insights公众号</div>
+        <div style="padding:8px 0;width:100%;text-align:center;color:#fff;">洞见Insights公众号</div>
       </div>
     </nz-dropdown-menu>
   `,
