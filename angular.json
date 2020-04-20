@@ -152,7 +152,7 @@
             "sk": "UrrQxmSPe9ZxumdSZ8YGI7noNNVazU",
             "bucket": "blog-ngy",
             "prefix": "",
-            "buildCommand": "npm run build"
+            "buildCommand": "npm run build:prod"
           }
         }
       }
