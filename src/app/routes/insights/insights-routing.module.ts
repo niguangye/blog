@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InsightsInsightsComponent } from './list/insights.component';
+import { InsightsListComponent } from './list/list.component';
 
 const routes: Routes = [
 
-  { path: 'insights', component: InsightsInsightsComponent }];
+  { path: '', component: InsightsListComponent, data: { title: '洞见' } }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

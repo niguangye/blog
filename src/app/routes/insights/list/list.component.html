@@ -1,0 +1,96 @@
+<nz-tabset nzTabPosition="left" [(nzSelectedIndex)]="selectedIndex" (nzSelectChange)="log([$event])">
+  <nz-tab
+    [nzTitle]="'GDP'"
+    (nzSelect)="log(['select', 'GDP'])"
+    (nzClick)="log(['click', 'GDP'])"
+    (nzDeselect)="log(['deselect', 'GDP'])"
+  >
+    <nz-card nzTitle="GDP">
+      <div>990865.0(亿元)</div>
+    </nz-card>
+  </nz-tab>
+  <nz-tab
+    [nzTitle]="'ToDO'"
+    (nzSelect)="log(['select', 'ToDO'])"
+    (nzClick)="log(['click', 'ToDO'])"
+    (nzDeselect)="log(['deselect', 'ToDO'])"
+  >
+    <nz-card nzTitle="Todo lists" [nzBordered]="false" class="ant-card__body-nopadding">
+      <div
+        nz-row
+        [nzType]="'flex'"
+        [nzJustify]="'center'"
+        [nzAlign]="'middle'"
+        class="py-sm bg-grey-lighter-h point"
+        *ngFor="let item of todoData"
+      >
+        <div nz-col [nzSpan]="4" class="text-center">
+          <nz-avatar [nzSrc]="'./assets/tmp/img/' + item.avatar + '.png'"></nz-avatar>
+        </div>
+        <div nz-col [nzSpan]="18">
+          <strong>{{ item.name }}</strong>
+          <p [class.text-deleted]="item.completed" class="mb0">{{ item.content }}</p>
+        </div>
+        <div nz-col [nzSpan]="2" class="text-right pr-md">
+          <i
+            nz-dropdown
+            [nzDropdownMenu]="todoMenus"
+            nzPlacement="topRight"
+            nz-icon
+            nzType="ellipsis"
+            class="rotate-90"
+          ></i>
+          <nz-dropdown-menu #todoMenus="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item *ngIf="item.completed" (click)="item.completed = false">Active</li>
+              <li nz-menu-item *ngIf="!item.completed" (click)="item.completed = true">Completed</li>
+              <li nz-menu-item (click)="todoData.splice(todoData.indexOf(item), 1)">Delted</li>
+            </ul>
+          </nz-dropdown-menu>
+        </div>
+      </div>
+    </nz-card>
+  </nz-tab>
+  <nz-tab
+    [nzTitle]="'小康'"
+    (nzSelect)="log(['select', '小康'])"
+    (nzClick)="log(['click', '小康'])"
+    (nzDeselect)="log(['deselect', '小康'])"
+  >
+    <nz-card nzTitle="小康的十六个基本标准">
+      <ul>
+     <li>1、人均国内生产总值2500元（按1980年的价格和汇率计算，2500元相当于900美元）</li>
+
+      <li>2、城镇人均可支配收入2400元；</li>
+
+      <li> 3、农民人均纯收入1200元；</li>
+
+      <li>4、城镇人均住房面积12平方米；</li>
+
+      <li> 5、农村钢木结构住房人均使用面积15平方米；</li>
+
+      <li> 6、人均蛋白质摄入量75克；</li>
+
+        <li>7、城市每人拥有铺路面积8平方米；</li>
+
+        <li>8、农村通公路行政村比重85%；</li>
+
+        <li>9、恩格尔系数50%；</li>
+
+        <li>10、成人识字率85%；</li>
+
+        <li>11、人均预期寿命70岁；</li>
+
+        <li>12、婴儿死亡率31‰；</li>
+
+        <li>13、教育娱乐支出比重11%；</li>
+
+        <li>14、电视机普及率100%；</li>
+
+        <li>15、森林覆盖率15%；</li>
+
+        <li>16、农村初级卫生保健基本合格县比重100%。</li>
+      </ul>
+    </nz-card>
+  </nz-tab>
+</nz-tabset>

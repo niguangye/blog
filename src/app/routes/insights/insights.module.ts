@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
 import { InsightsRoutingModule } from './insights-routing.module';
-import { InsightsInsightsComponent } from './list/insights.component';
+import { InsightsListComponent } from './list/list.component';
 import { InsightsInsightsEditComponent } from './edit/edit.component';
 import { InsightsInsightsViewComponent } from './view/view.component';
 
 const COMPONENTS = [
-  InsightsInsightsComponent];
+  InsightsListComponent];
 const COMPONENTS_NOROUNT = [
   InsightsInsightsEditComponent,
   InsightsInsightsViewComponent];
