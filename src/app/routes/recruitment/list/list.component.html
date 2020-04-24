@@ -19,7 +19,7 @@
       </button>
       <nz-card nzHoverable *ngIf="item !== null" [nzActions]="[op1, op2]">
         <ng-template #op1>
-          <a href="https://zhaopin.kuaishou.cn/recruit/e/#/official/social/" target="_blank">
+          <a [href]="item.href" target="_blank">
             去看看
           </a>
         </ng-template>
@@ -31,10 +31,10 @@
             <nz-avatar nzSize="large" [nzSrc]="item.avatar"></nz-avatar>
           </ng-template>
           <ng-template #nzTitle>
-            <a (click)="msg.success('标题：' + item.id)">{{ item.title }}</a>
+            <a [href]="item.href" target="_blank">{{ item.title }}</a>
           </ng-template>
           <ng-template #nzDescription>
-            <ellipsis>{{ item.description }}</ellipsis>
+            <ellipsis [lines]="3">{{ item.description }}</ellipsis>
           </ng-template>
         </nz-card-meta>
       </nz-card>
