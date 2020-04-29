@@ -9,9 +9,23 @@
       <app-article-list></app-article-list>
     </nz-col>
     <nz-col nzXs="0" nzSm="0" nzMd="8" nzLg="8" nzXl="6">
-      <nz-card style="width:300px;" nzTitle="创作者中心" [nzExtra]="extraTemplate">
-        <p>发文章</p>
-        <p>留言</p>
+      <nz-card style="width:300px;" nzTitle="创作者中心" >
+        <div sg-container="2">
+          <sg>
+            <a [routerLink]="['/articles/add']">
+            <div class="text-center point">
+              <i nz-icon nzType="form" nzTheme="outline" style="font-size: 32px;color: #722ED1;"></i>
+              <h5 class="text-purple-light m-sm">发文章</h5>
+            </div>
+            </a>
+          </sg>
+          <sg>
+            <div class="text-center  point">
+              <i nz-icon nzType="highlight" nzTheme="outline" style="font-size: 32px;color: #722ED1;"></i>
+              <h5 class="text-purple-light m-sm">写想法</h5>
+            </div>
+          </sg>
+        </div>
         <ng-template #extraTemplate>
           <a>More</a>
         </ng-template>
