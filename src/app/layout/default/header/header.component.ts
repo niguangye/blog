@@ -4,6 +4,7 @@ import { SettingsService } from '@delon/theme';
 @Component({
   selector: 'layout-header',
   templateUrl: './header.component.html',
+  styleUrls:['header.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
