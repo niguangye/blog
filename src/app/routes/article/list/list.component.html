@@ -2,10 +2,9 @@
   [nzDataSource]="data"
   [nzItemLayout]="'vertical'"
   [nzRenderItem]="item"
-  [nzLoadMore]="loadMore"
-  [nzFooter]="footer"
 >
   <ng-template #item let-item>
+    <nz-card>
     <nz-list-item [nzContent]="item.content" [nzActions]="[starAction, likeAction, msgAction]" [nzExtra]="extra">
       <ng-template #starAction><i nz-icon nzType="star-o" style="margin-right: 8px;"></i> 156</ng-template>
       <ng-template #likeAction><i nz-icon nzType="like-o" style="margin-right: 8px;"></i> 156</ng-template>
@@ -19,6 +18,7 @@
         <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
       </ng-template>
     </nz-list-item>
+    </nz-card>
   </ng-template>
   <ng-template #footer>
     <div><b>ant design</b> footer part</div>
