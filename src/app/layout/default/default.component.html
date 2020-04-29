@@ -1,8 +1,7 @@
 <div class="alain-default__progress-bar" *ngIf="isFetching"></div>
 <layout-header class="alain-default__header"></layout-header>
 <!--<layout-sidebar class="alain-default__aside"></layout-sidebar>-->
-<img src="assets/slogan.png" alt="人总是高估短期，低估长期" width="100%" class="slogan"/>
-<section class="default__content">
+<section>
   <router-outlet></router-outlet>
 </section>
 <nz-back-top [nzTemplate]="tpl" [nzVisibilityHeight]="100">

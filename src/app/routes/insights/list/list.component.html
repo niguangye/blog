@@ -1,4 +1,10 @@
-<nz-tabset nzTabPosition="left" [(nzSelectedIndex)]="selectedIndex" (nzSelectChange)="log([$event])">
+
+<div class="slogan" style="background-image: url('assets/slogan/gsbg.png')">
+  <img src="assets/slogan/ren.png" alt="丢掉幻想，准备斗争" width="100%" style="opacity:0.9; filter: alpha(opacity=80);"/>
+</div>
+
+<div class="default__content">
+  <nz-tabset nzTabPosition="left" [(nzSelectedIndex)]="selectedIndex" (nzSelectChange)="log([$event])">
   <nz-tab
     [nzTitle]="'GDP'"
     (nzSelect)="log(['select', 'GDP'])"
@@ -52,6 +58,28 @@
     </nz-card>
   </nz-tab>
   <nz-tab
+    [nzTitle]="'经济'"
+    (nzSelect)="log(['select', '经济'])"
+    (nzClick)="log(['click', '经济'])"
+    (nzDeselect)="log(['deselect', '经济'])"
+  >
+    <nz-card nzTitle="人民币从发行到流通" [nzBordered]="false" class="ant-card__body-nopadding">
+
+    </nz-card>
+  </nz-tab>
+  <nz-tab
+    [nzTitle]="'工业'"
+    (nzSelect)="log(['select', '工业'])"
+    (nzClick)="log(['click', '工业'])"
+    (nzDeselect)="log(['deselect', '工业'])"
+  >
+    <nz-card nzTitle="工业门类" [nzBordered]="false" class="ant-card__body-nopadding">
+      <p>41个工业大类</p>
+      <p>206个工业中类</p>
+      <p>656个工业小类</p>
+    </nz-card>
+  </nz-tab>
+  <nz-tab
     [nzTitle]="'小康'"
     (nzSelect)="log(['select', '小康'])"
     (nzClick)="log(['click', '小康'])"
@@ -94,3 +122,4 @@
     </nz-card>
   </nz-tab>
 </nz-tabset>
+</div>
