@@ -27,14 +27,23 @@ export class RecruitmentListComponent implements OnInit {
         'title':'字节跳动',
         'avatar':'assets/logos/zijie.png',
         'href':'https://job.bytedance.com/society/position',
-        'description': `和优秀的人，做有挑战的事\n字节跳动拥有较为完善的职业发展体系，充分贴近年轻员工追求自我发展的定位，为员工提供具有针对性和差异化的培训项目`
+        'description': `和优秀的人，做有挑战的事\n字节跳动拥有较为完善的职业发展体系，充分贴近年轻员工追求自我发展的定位，
+        为员工提供具有针对性和差异化的培训项目`
       },
       {
         'title':'拼多多',
         'avatar':'assets/logos/pinduoduo.jpg',
         'href':'https://www.pinduoduo.com/recruit.html',
-        'description': `拼着买，才偏移\n拼多多是中国新电商模式的开创者，目前拥有超过3.44亿的活跃买家和超过170万活跃商家。在以人为先的理念下，拼多多融合物质消费与精神消费，用户可以通过拼单，与好友分享买到便宜好货的快乐。`
-      }
+        'description': `拼着买，才便宜\n拼多多是中国新电商模式的开创者，目前拥有超过3.44亿的活跃买家和超过170万活跃商家。
+        在以人为先的理念下，拼多多融合物质消费与精神消费，用户可以通过拼单，与好友分享买到便宜好货的快乐。`
+      },
+
+    {
+      'title':'有赞',
+      'avatar':'assets/logos/youzan.jpg',
+      'href':'http://campus.youzan.com/apply/youzan/3750#/jobs?zhineng=7902&page=1&_k=31oshc',
+      'description': `Enjoy有赞，一个开心的组织\n我们致力于成为商家服务领域里最被新任的引领者，并持续做一个Enjoy的组织`
+    },
     ];
     this.loading = false;
   }
