@@ -141,19 +141,6 @@
               "devServerTarget": "blog:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "ng-deploy-oss:deploy",
-          "options": {
-            "outputPath": "dist/blog",
-            "type": "ali-oss",
-            "region": "oss-cn-beijing",
-            "ak": "LTAI4FeXzCKbRZVYsBRe5YwT",
-            "sk": "UrrQxmSPe9ZxumdSZ8YGI7noNNVazU",
-            "bucket": "blog-ngy",
-            "prefix": "",
-            "buildCommand": "npm run build:prod"
-          }
         }
       }
     }
