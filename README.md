@@ -1,14 +1,15 @@
 ## 博客项目
-
-  [![Build Status](https://img.shields.io/travis/ng-alain/ng-alain/master.svg?style=flat-square)](https://travis-ci.org/ng-alain/ng-alain)
-  [![GitHub Release Date](https://img.shields.io/github/release-date/ng-alain/ng-alain.svg?style=flat-square)](https://github.com/ng-alain/ng-alain/releases)
+  ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/niguangye/blog/oss-deploy)
+  ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/niguangye/blog?include_prereleases)
   [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/ng-alain/ng-alain/blob/master/LICENSE)
-  [![Gitter](https://img.shields.io/gitter/room/ng-alain/ng-alain.svg?style=flat-square)](https://gitter.im/ng-alain/ng-alain)
-
+  
 ## 主要
 
 - [博客主页:fire:](https://blog.niguangye.com)
 
+
+## 说明
+- 已接入Github Actions自动部署
 
 ## Links
 
