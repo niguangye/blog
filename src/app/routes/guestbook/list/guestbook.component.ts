@@ -17,7 +17,7 @@ export class GuestbookGuestbookComponent implements OnInit {
       }
     }
   };
-  @ViewChild('st', { static: false }) st: STComponent;
+  @ViewChild('st') st: STComponent;
   columns: STColumn[] = [
     { title: '编号', index: 'no' },
     { title: '调用次数', type: 'number', index: 'callNo' },
