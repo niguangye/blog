@@ -8,7 +8,7 @@
         [ngStyle]="{ 'background-color': c.color }"
         (click)="changeColor(c.color)"
         nz-tooltip
-        [nzTitle]="c.key"
+        [nzTooltipTitle]="c.key"
         class="setting-drawer__theme-tag"
         ><i *ngIf="color === c.color" nz-icon nzType="check"></i
       ></span>
