@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "node_modules/ngx-simplemde/src/index.css"
+              "src/styles.less"
             ],
             "scripts": [
               "node_modules/ajv/dist/ajv.bundle.js",
