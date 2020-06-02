@@ -42,4 +42,4 @@ jobs:
         access-key-secret: ${{ secrets.OSS_SK }}
         # 非必配项，若采用STS临时授权方式访问OSS需要配置该项。stsToken生成方式参考临时访问凭证
         # sts-token: # optional, default is 
-    - run: ossutil cp -rf .vuepress/dist oss://blog-ngy/
+    - run: ossutil cp -rf dist/blog oss://blog-ngy/
