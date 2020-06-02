@@ -6,7 +6,7 @@ name: oss-deploy
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ master, dev ]
   pull_request:
     branches: [ master ]
 
