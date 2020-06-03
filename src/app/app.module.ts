@@ -61,10 +61,9 @@ const APPINIT_PROVIDES = [
   }
 ];
 // #endregion
-
-import { DelonModule } from './delon.module';
-import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from '@core/core.module';
+import { SharedModule } from '@shared';
+import { GlobalConfigModule } from './global-config.module';
 import { AppComponent } from './app.component';
 import { RoutesModule } from './routes/routes.module';
 import { LayoutModule } from './layout/layout.module';
@@ -76,8 +75,8 @@ import { LayoutModule } from './layout/layout.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    GlobalConfigModule.forRoot(),
     HttpClientModule,
-    DelonModule.forRoot(),
     CoreModule,
     SharedModule,
     LayoutModule,

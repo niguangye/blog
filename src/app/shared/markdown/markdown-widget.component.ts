@@ -22,6 +22,8 @@ import { ControlWidget } from '@delon/form';
 })
 // tslint:disable-next-line:component-class-suffix
 export class MarkdownWidget extends ControlWidget {
+  // TODO: add explicit constructor
+
   static readonly KEY = 'md';
 
   _change(value: string) {

@@ -3,6 +3,6 @@
 // you can still use it by manually adding typings for it
 
 // G2
-declare var G2: any;
-declare var DataSet: any;
-declare var Slider: any;
+
+
+
